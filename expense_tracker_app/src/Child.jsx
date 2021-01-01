@@ -13,7 +13,7 @@ function Child(){
     const handleAddition = (event) => {
          event.preventDefault();    
          addTransaction({
-             amount : newAmount,
+             amount :Number(newAmount),
              desc : newDesc
          })
     }   
@@ -40,7 +40,7 @@ function Child(){
     <>
     <div className = 'container'>
         <h1 className = "textCenter"> EXPENSE TRAKER </h1>
-        <h3>Your Expense <br/> $260.00  </h3> 
+        <h3>Your Balance <br/> { getIncome() + getExpense()}  </h3> 
 
         <div className = "expenseContainer">
             <h3>INCOME <br/>{ getIncome()} </h3>
